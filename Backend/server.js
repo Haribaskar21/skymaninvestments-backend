@@ -8,7 +8,8 @@ const authRoutes = require('./routes/authRoutes');
 const blogRoutes = require('./routes/blogRoutes');
 const newsRoutes = require('./routes/newsRoutes');
 const uploadRoutes = require('./routes/upload');
-const metaRoutes = require('./routes/metaRoutes')
+const cronRoutes = require('./routes/cronRoutes');
+const metaRoutes = require('./routes/metaRoutes');
 
 
 const app = express();
@@ -20,6 +21,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/blogs', blogRoutes);
 app.use('/api/news', newsRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/cron', cronRoutes);
 // server.js or app.js
 app.use('/api/meta', metaRoutes);
 
